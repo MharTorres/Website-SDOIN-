@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Search results for SDOIN - Schools Division of Ilocos Norte">
+  <meta name="keywords" content="SDOIN, search, education, Ilocos Norte, DepEd">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="deped-seal.png" />
+  <title>Search Results - SDOIN</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --primary-color: #004aad;
+      --secondary-color: #3b5bfe;
+      --light-color: #f8f9fa;
+      --card-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      --card-radius: 18px;
+      --input-radius: 30px;
+      --transition: all 0.25s cubic-bezier(.4,0,.2,1);
+    }
+    .search-results-hero {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .search-results-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .search-form {
+      background: white;
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      border-radius: var(--card-radius);
+      box-shadow: var(--card-shadow);
+      margin-bottom: 2rem;
+      border: 1px solid #e9ecef;
+    }
+    .search-input-group {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .search-input-group input {
+      flex: 1;
+      padding: 14px 20px;
+      border: 2px solid #e9ecef;
+      border-radius: var(--input-radius);
+      font-size: 1.05rem;
+      outline: none;
+      transition: var(--transition);
+      background: var(--light-color);
+    }
+    .search-input-group input:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 0.2rem rgba(0, 74, 173, 0.10);
+      background: #fff;
+    }
+    .search-input-group button {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: var(--input-radius);
+      font-size: 1.05rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 2px 8px rgba(0,74,173,0.10);
+    }
+    .search-input-group button:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 6px 18px rgba(0,74,173,0.18);
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    }
+    .search-filters {
+      background: white;
+      padding: 1.2rem 1rem 1rem 1rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      border: 1px solid #e9ecef;
+    }
+    .filter-buttons {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      padding: 0.5rem 1.2rem;
+      border: 1.5px solid #dee2e6;
+      background: white;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+    .filter-btn.active {
+      background: var(--primary-color);
+      color: white;
+      border-color: var(--primary-color);
+      box-shadow: 0 2px 8px rgba(0,74,173,0.10);
+    }
+    .filter-btn:hover {
+      background: var(--light-color);
+      color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+    .search-stats {
+      background: var(--light-color);
+      padding: 1.1rem 1rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 1.05rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .result-item {
+      background: white;
+      border-radius: var(--card-radius);
+      padding: 1.5rem 1.2rem;
+      margin-bottom: 1.2rem;
+      box-shadow: var(--card-shadow);
+      transition: var(--transition);
+      border-left: 5px solid transparent;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      border: 1px solid #e9ecef;
+    }
+    .result-item:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 8px 32px rgba(0, 74, 173, 0.13);
+      border-left-color: var(--primary-color);
+    }
+    .result-image {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 10px;
+      flex-shrink: 0;
+      border: 1.5px solid #e9ecef;
+      background: var(--light-color);
+    }
+    .result-content {
+      flex: 1;
+      text-align: left;
+    }
+    .result-title {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.13rem;
+      margin-bottom: 0.4rem;
+      text-decoration: none;
+      display: block;
+      transition: color 0.2s;
+    }
+    .result-title:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+    .result-description {
+      color: #6c757d;
+      font-size: 1.01rem;
+      line-height: 1.6;
+      margin-bottom: 0.7rem;
+    }
+    .result-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.93rem;
+      color: #6c757d;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .result-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .result-type-badge {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.25rem 0.7rem;
+      border-radius: 12px;
+      font-size: 0.81rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .result-category-badge {
+      background: var(--light-color);
+      color: #6c757d;
+      padding: 0.25rem 0.7rem;
+      border-radius: 12px;
+      font-size: 0.81rem;
+      font-weight: 500;
+    }
+    .no-results {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #6c757d;
+    }
+    .no-results i {
+      font-size: 4rem;
+      color: #dee2e6;
+      margin-bottom: 1rem;
+    }
+    .search-suggestions {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--card-radius);
+      box-shadow: var(--card-shadow);
+      margin-bottom: 2rem;
+      border: 1px solid #e9ecef;
+    }
+    .suggestion-item {
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 1.05rem;
+      color: var(--primary-color);
+      background: var(--light-color);
+      border: 1px solid #e9ecef;
+    }
+    .suggestion-item:hover {
+      background-color: #e9f0ff;
+      color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+    .suggestion-item:last-child {
+      margin-bottom: 0;
+    }
+    .loading-spinner {
+      text-align: center;
+      padding: 2rem;
+    }
+    .spinner-border {
+      width: 3rem;
+      height: 3rem;
+    }
+    @media (max-width: 900px) {
+      .search-results-container {
+        max-width: 98vw;
+      }
+      .result-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.2rem 0.7rem;
+      }
+      .result-image {
+        width: 100%;
+        height: 180px;
+        margin: 0 auto 1rem auto;
+      }
+      .result-content {
+        text-align: center;
+      }
+      .result-meta {
+        justify-content: center;
+      }
+      .filter-buttons {
+        justify-content: center;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .search-results-container {
+        padding: 0 0.5rem;
+      }
+      .search-form {
+        padding: 1rem;
+      }
+      .search-suggestions {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ilocos-banner">"Ragsak ken Rag-omi ti Napudno nga Agserbi"</div>
+
+  <nav class="navbar navbar-expand-lg main-navbar sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-home me-1"></i>Home
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i>About</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html"><i class="fas fa-graduation-cap me-1"></i>Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="initiatives.php"><i class="fas fa-lightbulb me-1"></i>Key Initiatives</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.php"><i class="fas fa-book me-1"></i>Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html"><i class="fas fa-newspaper me-1"></i>News</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.php"><i class="fas fa-images me-1"></i>Gallery</a></li>
+        </ul>
+
+        <div id="searchBarContainer"></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="header-banner">
+    <img src="deped-seal.png" alt="DepEd Logo" class="deped-logo">
+    <div class="text-center flex-grow-1">
+      <h3 class="fw-bold mb-1">SCHOOL DIVISION OF ILOCOS NORTE (SDOIN)</h3>
+    </div>
+    <div class="d-flex gap-2">
+      <img src="toured-logo.png" alt="TourEd Logo" class="tourlogo">
+      <img src="inherited-logo.png" alt="INheritEd Logo" class="inheritelogo">
+      <img src="sdoin-great.png" alt="SDOIN Great Logo" class="sdoinlogo">
+    </div>
+  </div>
+
+  <!-- Search Results Hero -->
+  <div class="search-results-hero" style="background: rgba(255,255,255,0.95); color: #000;">
+    <div class="container">
+      <h1><i class="fas fa-search me-2"></i>Search Results</h1>
+      <div class="search-results-container">
+        <!-- Search Form -->
+        <div class="search-form">
+          <form action="search.html" method="GET" class="search-input-group">
+            <input 
+              type="text" 
+              name="q" 
+              id="searchInput"
+              placeholder="Search for programs, resources, news..."
+              value=""
+              required
+            />
+            <button type="submit">
+              <i class="fas fa-search me-1"></i>Search
+            </button>
+          </form>
+        </div>
+    
+        <!-- Search Filters -->
+        <div class="search-filters">
+          <h6 class="mb-2"><i class="fas fa-filter me-1"></i>Filter Results:</h6>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-category="">All</button>
+            <button class="filter-btn" data-category="gallery">Gallery</button>
+            <button class="filter-btn" data-category="resource">Resources</button>
+            <button class="filter-btn" data-category="page">Pages</button>
+            <button class="filter-btn" data-category="programs">Programs</button>
+            <button class="filter-btn" data-category="initiatives">Initiatives</button>
+            <button class="filter-btn" data-category="events">Events</button>
+            <button class="filter-btn" data-category="sports">Sports</button>
+          </div>
+        </div>
+    
+        <!-- Search Statistics -->
+        <div class="search-stats">
+          <i class="fas fa-info-circle me-2"></i>
+          Showing results for: <strong id="searchQuery">Enter a search term above</strong>
+          <span id="resultCount"></span>
+        </div>
+    
+        <!-- Search Results -->
+        <div id="searchResults">
+          <div class="no-results">
+            <i class="fas fa-search"></i>
+            <h3>Ready to Search</h3>
+            <p>Enter a search term above to find relevant content from SDOIN.</p>
+          </div>
+        </div>
+        <!-- Popular Search Suggestions -->
+        <div id="searchSuggestions" class="search-suggestions" style="display:none;">
+          <h6>Popular Searches:</h6>
+          <div id="suggestionList"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <footer class="footer text-center-footer">
+    <section id="contact" class="contact-section text-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Contacts</h5>
+            <p><strong>Address:</strong> Brgy. 7B, Giron Street, Laoag City, Ilocos Norte</p>
+            <p><strong>Email:</strong> <a href="mailto:ilocos.norte@deped.gov.ph" class="text-black text-decoration-underline">ilocos.norte@deped.gov.ph</a></p>
+            <p><strong>Phone:</strong> <a href="tel:(077)771-0960">(077) 771-0960</a></p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/depedtayoilocosnorte/" target="_blank" class="text-black text-decoration-underline">DepEd Tayo Ilocos Norte</a></p>
+          </div>
+          <div class="col-md-6">
+            <img src="deped-seal.png" alt="DepEd Logo" class="deped-logo2">
+            <h5>Get in Touch</h5>
+            <a href="send-inquiry.html" class="btn btn-primary text-white">Send an Inquiry</a>
+            <div class="mt-3">
+              <a href="backend/login.html" target="_blank" class="btn btn-outline-secondary btn-sm">
+                <i class="fas fa-lock"></i> Admin Login
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer-note">
+      &copy; 2025 Schools Division Office of Ilocos Norte | Designed with love for learners and educators.
+    </div>
+  </footer>
+
+  <script src="search_bar.js"></script>
+  <script>
+    // Initialize enhanced search bar in navigation
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchContainer = document.getElementById('searchBarContainer');
+      if (searchContainer) {
+        new SDOINSearchBar(searchContainer, {
+          placeholder: 'Search SDOIN...',
+          showSuggestions: true,
+          autoComplete: true
+        });
+      }
+    });
+
+    // Global variables
+    let currentResults = [];
+    let currentFilter = '';
+    let loadingTimeout;
+
+    // Popular searches
+    const popularSearches = ['Programs', 'Gallery', 'Initiatives', 'Sports', 'Resources'];
+    let suggestionList, searchSuggestions, searchInput;
+
+    // Search functionality for main search form
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('q');
+      const category = urlParams.get('category');
+      
+      searchInput = document.getElementById('searchInput');
+      suggestionList = document.getElementById('suggestionList');
+      searchSuggestions = document.getElementById('searchSuggestions');
+      
+      // Auto-focus search input
+      if (searchInput) searchInput.focus();
+
+      // Show suggestions on focus or when input is empty
+      function showSuggestions() {
+        suggestionList.innerHTML = popularSearches.map(term => 
+          `<div class="suggestion-item">${term}</div>`
+        ).join('');
+        searchSuggestions.style.display = 'block';
+      }
+      function hideSuggestions() {
+        searchSuggestions.style.display = 'none';
+      }
+      if (searchInput) {
+        searchInput.addEventListener('focus', function() {
+          if (!this.value.trim()) showSuggestions();
+        });
+        searchInput.addEventListener('input', function() {
+          if (!this.value.trim()) showSuggestions();
+          else hideSuggestions();
+        });
+      }
+      if (suggestionList) {
+        suggestionList.addEventListener('click', function(e) {
+          if (e.target.classList.contains('suggestion-item')) {
+            searchInput.value = e.target.textContent;
+            hideSuggestions();
+            performSearch(e.target.textContent);
+          }
+        });
+      }
+
+      if (query) {
+        document.getElementById('searchInput').value = query;
+        performSearch(query);
+      }
+
+      // Handle filter state from URL
+      if (category) {
+        currentFilter = category;
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-category') === category);
+        });
+      }
+
+      // Handle search form submission
+      const searchForm = document.querySelector('.search-input-group');
+      if (searchForm && searchInput) {
+        searchForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const searchTerm = searchInput.value.trim();
+          if (searchTerm) {
+            hideSuggestions();
+            performSearch(searchTerm);
+          }
+        });
+      }
+
+      // Handle filter buttons
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          // Keyboard accessibility
+          if (e.type === 'click' || e.key === 'Enter' || e.key === ' ') {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            const category = this.getAttribute('data-category');
+            currentFilter = category;
+            // Update filter state in URL
+            const urlParams = new URLSearchParams(window.location.search);
+            urlParams.set('category', currentFilter);
+            if (searchInput && searchInput.value.trim()) {
+              urlParams.set('q', searchInput.value.trim());
+            }
+            window.history.replaceState({}, '', `search.html?${urlParams.toString()}`);
+            filterResults();
+          }
+        });
+        // Keyboard accessibility
+        button.setAttribute('tabindex', '0');
+        button.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            button.click();
+          }
+        });
+      });
+    });
+
+    async function performSearch(query) {
+      document.getElementById('searchQuery').textContent = query;
+      showLoading();
+      try {
+        const params = new URLSearchParams();
+        params.append('q', query);
+        if (currentFilter) {
+          params.append('category', currentFilter);
+        }
+        const response = await fetch(`backend/search_api.php?${params.toString()}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        currentResults = data.results;
+        displayResults(data);
+        // Update URL without page reload
+        const newUrl = `search.html?q=${encodeURIComponent(query)}${currentFilter ? `&category=${encodeURIComponent(currentFilter)}` : ''}`;
+        window.history.pushState({}, '', newUrl);
+      } catch (error) {
+        console.error('Search error:', error);
+        showError('An error occurred while searching. Please try again.');
+      } finally {
+        clearLoadingTimeout();
+      }
+    }
+
+    function displayResults(data) {
+      clearLoadingTimeout();
+      const resultsContainer = document.getElementById('searchResults');
+      const resultCount = document.getElementById('resultCount');
+      if (data.total === 0) {
+        resultsContainer.innerHTML = `
+          <div class="no-results">
+            <i class="fas fa-search"></i>
+            <h3>No Results Found</h3>
+            <p>Try adjusting your search terms or browse our popular searches below.</p>
+          </div>
+        `;
+        resultCount.textContent = '';
+        return;
+      }
+      resultCount.textContent = ` (${data.total} results)`;
+      const resultsHTML = data.results.map(result => {
+        const imageSrc = result.image || result.file || 'deped-seal.png';
+        const iconClass = getIconClass(result.type, result.file);
+        const date = result.date ? new Date(result.date).toLocaleDateString() : '';
+        let link = result.url;
+        if (result.type === 'page' && (result.url === 'initiatives.html' || result.url === './initiatives.html')) {
+          link = 'initiatives.php';
+        } else if (result.type === 'gallery' && result.category && result.category.toLowerCase() === 'initiatives') {
+          if (result.theme) {
+            link = 'initiatives.php#' + encodeURIComponent(result.theme);
+          } else {
+            link = 'initiatives.php';
+          }
+        }
+        return `
+          <div class="result-item">
+            <img src="${imageSrc}" alt="${result.title}" class="result-image" onerror="this.src='deped-seal.png'">
+            <div class="result-content">
+              <a href="${link}" class="result-title">
+                <i class="${iconClass} me-1"></i>${result.title}
+              </a>
+              <p class="result-description">${result.description || 'No description available.'}</p>
+              <div class="result-meta">
+                <span class="result-type-badge">${result.type}</span>
+                ${result.category ? `<span class="result-category-badge">${result.category}</span>` : ''}
+                ${date ? `<span><i class="fas fa-calendar me-1"></i>${date}</span>` : ''}
+                ${result.matched_terms ? `<span><i class="fas fa-tags me-1"></i>Matched: ${result.matched_terms.join(', ')}</span>` : ''}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+      resultsContainer.innerHTML = resultsHTML;
+    }
+
+    function filterResults() {
+      if (currentFilter === '') {
+        displayResults({ results: currentResults, total: currentResults.length });
+      } else {
+        const filteredResults = currentResults.filter(result => {
+          if (currentFilter === 'gallery' && result.type === 'gallery') return true;
+          if (currentFilter === 'resource' && result.type === 'resource') return true;
+          if (currentFilter === 'page' && result.type === 'page') return true;
+          if (result.category && result.category.toLowerCase() === currentFilter.toLowerCase()) return true;
+          return false;
+        });
+        displayResults({ results: filteredResults, total: filteredResults.length });
+      }
+    }
+
+    function getIconClass(type, file) {
+      if (type === 'resource' && file) {
+        const ext = file.split('.').pop().toLowerCase();
+        if (ext === 'pdf') return 'fas fa-file-pdf';
+        if (['doc', 'docx'].includes(ext)) return 'fas fa-file-word';
+        if (['xls', 'xlsx'].includes(ext)) return 'fas fa-file-excel';
+        if (['ppt', 'pptx'].includes(ext)) return 'fas fa-file-powerpoint';
+        if (['jpg', 'jpeg', 'png', 'gif'].includes(ext)) return 'fas fa-file-image';
+      }
+      const icons = {
+        'gallery': 'fas fa-images',
+        'resource': 'fas fa-file-alt',
+        'page': 'fas fa-file-text'
+      };
+      return icons[type] || 'fas fa-file';
+    }
+
+    function showLoading() {
+      const resultsContainer = document.getElementById('searchResults');
+      resultsContainer.innerHTML = `
+        <div class="loading-spinner">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="mt-2">Searching...</p>
+        </div>
+      `;
+      // Show a message if backend is slow
+      loadingTimeout = setTimeout(() => {
+        resultsContainer.innerHTML += `<div class="text-center text-muted mt-2">Still searching... Please wait.</div>`;
+      }, 2000);
+    }
+    function clearLoadingTimeout() {
+      if (loadingTimeout) clearTimeout(loadingTimeout);
+    }
+    function showError(message) {
+      clearLoadingTimeout();
+      const resultsContainer = document.getElementById('searchResults');
+      resultsContainer.innerHTML = `
+        <div class="no-results">
+          <i class="fas fa-exclamation-triangle"></i>
+          <h3>Search Error</h3>
+          <p>${message}</p>
+        </div>
+      `;
+    }
+
+    // Back to Top button
+    document.addEventListener('DOMContentLoaded', function() {
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (backToTop) backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+      });
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+  <!-- Back to Top Button -->
+  <button id="backToTop" style="display:none;position:fixed;bottom:30px;right:30px;z-index:999;" class="btn btn-primary">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

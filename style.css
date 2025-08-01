@@ -1,0 +1,1599 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('background22.jpg'); /* Replace with your actual image file */
+    background-size: cover;
+    background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+  }
+  .ilocos-banner {
+    background-color: rgb(71, 71, 242);
+    color: white;
+    padding: 8px 20px;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+  }
+  .main-navbar {
+    border-bottom: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better separation */
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  .main-navbar .nav-link {
+    color: #000;
+    font-weight: 500;
+  }
+  .main-navbar .nav-link:hover {
+    color: #004aad;
+  }
+  .header-banner {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .header-banner img {
+    max-height: 70px;
+    margin: 10px;
+  }
+  .tourlogo {
+    max-height: 45px !important;
+    width: auto;
+  }
+  .deped-logo {
+    max-height: 140px !important;
+    width: auto
+  }
+  .deped-logo3 {
+    max-height: 140px !important;
+    width: auto
+  }
+  .inheritelogo {
+    max-height: 50px !important;
+    width: auto;
+  }
+  .sdoinlogo {
+    max-height: 50px !important;
+    width: auto;
+  }
+  .banner-image {
+    width: 100.1%;
+    height: auto;
+    display: block;
+  } 
+  .initiatives {
+    text-align: center;
+  }
+  .initiative-image {
+    margin-left: 370px;
+    margin-bottom: auto;
+    width: 50%;
+    height: auto;
+    display: block;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .search-bar input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .access-icon {
+    font-size: 1.2em;
+    color: #000;
+  }
+  section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  h2 {
+    color: #004aad;
+  }
+  .footer {
+    background-color: darkgray;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+  }
+  .contact-section {
+  margin-top: 0px;
+  text-align: left;
+  background-color: darkgray;
+}
+.footer-note {
+  text-align: center;
+  padding: 10px 0;
+  background-color: darkgray;
+  font-size: 0.9rem;
+}
+.contact-section a {
+  color: black;
+}
+
+.contact-section h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.inquiry-section {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: darkgrey;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.inquiry-section form {
+  background-color: rgba(255, 255, 255, 0.9); /* Light background with transparency */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+}
+
+.deped-logo2 {
+  width: 100px;
+  margin-bottom: 10px;
+  display: block;
+      
+}
+.quick-links img {
+  max-width: 200px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.quick-link-btn img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.quick-links-section {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem 0;
+}
+
+/* Old search bar styles removed - replaced with enhanced version above */
+.sds-image-wrapper {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.sds-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sds-caption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #555;
+  font-size: 0.95rem;
+}
+.flag-raising-bg {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 40px 20px;
+  color: white;
+  border-radius: 10px;
+}
+.resources-section {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.resource-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card h5 {
+  color: #0056b3;
+}
+
+.resource-card .btn {
+  border-radius: 20px;
+}
+.media-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.image-gallery {
+  display: flex;
+  gap: 100px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.image-gallery img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.result-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.search-results {
+  background-color: rgba(255, 255, 255, 0.95); /* Translucent white */
+  padding: 30px;
+
+  
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.bg-overlay {
+  position: relative;
+  background: url('your-background-image.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  color: white;
+}
+
+.bg-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
+  z-index: 1;
+}
+
+.bg-overlay .overlay-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 100px 20px;
+}
+.news-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.news-item h4 {
+  font-weight: bold;
+}
+
+.news-item small {
+  display: block;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.news-item .btn {
+  background-color: #3b5bfe;
+  border: none;
+}
+.news-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Program page styling */
+.program {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #004aad;
+}
+
+.program img {
+  max-height: 60px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.program h3 {
+  color: #004aad;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.program p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.program ul {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.program li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.program strong {
+  color: #004aad;
+  font-weight: 600;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .header-banner {
+    padding: 8px 15px;
+  }
+  
+  .header-banner h3 {
+    font-size: 1.5rem;
+  }
+  
+  .deped-logo, .deped-logo3 {
+    max-height: 120px !important;
+  }
+  
+  .initiative-image {
+    margin-left: 200px;
+    width: 60%;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .header-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .header-banner h3 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+  }
+  
+  .deped-logo, .deped-logo3 {
+    max-height: 100px !important;
+  }
+  
+  .tourlogo, .inheritelogo, .sdoinlogo {
+    max-height: 40px !important;
+  }
+  
+  .initiative-image {
+    margin-left: 100px;
+    width: 70%;
+  }
+  
+  .search-bar {
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  .quick-links {
+    gap: 20px !important;
+  }
+  
+  .quick-links img {
+    max-width: 150px;
+  }
+  
+  .inquiry-section {
+    margin: 30px auto;
+    padding: 20px;
+    min-height: auto;
+  }
+  
+  .inquiry-section form {
+    padding: 20px;
+  }
+  
+  .contact-section .row {
+    text-align: center;
+  }
+  
+  .contact-section .col-md-6:first-child {
+    margin-bottom: 30px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .ilocos-banner {
+    font-size: 16px;
+    padding: 6px 15px;
+  }
+  
+  .header-banner h3 {
+    font-size: 1.1rem;
+  }
+  
+  .deped-logo, .deped-logo3 {
+    max-height: 80px !important;
+  }
+  
+  .tourlogo, .inheritelogo, .sdoinlogo {
+    max-height: 35px !important;
+  }
+  
+  .initiative-image {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .banner-image {
+    width: 100%;
+  }
+  
+  .image-gallery {
+    gap: 20px;
+  }
+  
+  .image-gallery img {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+  }
+  
+  .quick-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px !important;
+  }
+  
+  .quick-links img {
+    max-width: 120px;
+  }
+  
+  .cta-section .btn {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .cta-section .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-section .gap-3 {
+    gap: 10px !important;
+  }
+  
+  .inquiry-section {
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
+  .inquiry-section form {
+    padding: 15px;
+  }
+  
+  .deped-logo2 {
+    width: 80px;
+  }
+  
+  .footer {
+    padding: 15px;
+  }
+  
+  .contact-section {
+    padding: 15px;
+  }
+  
+  .contact-section .container {
+    padding: 0;
+  }
+  
+  .contact-section .row {
+    margin: 0;
+  }
+  
+  .contact-section .col-md-6 {
+    padding: 0px;
+  }
+  
+  .contact-section .col-md-6:first-child {
+    margin-bottom: 0px;
+  }
+  
+  .search-results {
+    padding: 20px;
+  }
+  
+  .news-item {
+    padding: 15px;
+  }
+  
+  .program {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .program img {
+    max-height: 50px;
+  }
+  
+  .program h3 {
+    font-size: 1.3rem;
+  }
+  
+  .resource-card {
+    margin-bottom: 20px;
+  }
+  
+  .sds-image-wrapper {
+    margin-top: 0.5rem;
+  }
+  
+  .sds-image {
+    max-width: 100%;
+  }
+  
+  .flag-raising-bg {
+    padding: 20px 15px;
+  }
+  
+  .flag-raising-bg iframe {
+    width: 100% !important;
+    height: 250px !important;
+  }
+  
+  section {
+    padding: 15px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .ilocos-banner {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  .header-banner {
+    padding: 5px 10px;
+  }
+  
+  .header-banner h3 {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  
+  .deped-logo, .deped-logo3 {
+    max-height: 60px !important;
+  }
+  
+  .tourlogo, .inheritelogo, .sdoinlogo {
+    max-height: 30px !important;
+  }
+  
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  
+  /* Search bar styles handled by enhanced styles above */
+  
+  .image-gallery img {
+    max-width: 250px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 5px;
+  }
+  
+  .quick-links img {
+    max-width: 100px;
+  }
+  
+  .inquiry-section {
+    margin: 15px auto;
+    padding: 10px;
+  }
+  
+  .inquiry-section form {
+    padding: 10px;
+  }
+  
+  .deped-logo2 {
+    width: 60px;
+  }
+  
+  .footer {
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .contact-section {
+    padding: 10px;
+  }
+  
+  .contact-section h5 {
+    font-size: 1rem;
+  }
+  
+  .contact-section p {
+    font-size: 0.9rem;
+  }
+  
+  .search-results {
+    padding: 15px;
+  }
+  
+  .news-item {
+    padding: 10px;
+  }
+  
+  .news-item h4 {
+    font-size: 1.1rem;
+  }
+  
+  .program {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .program h3 {
+    font-size: 1.2rem;
+  }
+  
+  .program p, .program li {
+    font-size: 0.9rem;
+  }
+  
+  .flag-raising-bg {
+    padding: 15px 10px;
+  }
+  
+  .flag-raising-bg iframe {
+    height: 200px !important;
+  }
+  
+  section {
+    padding: 10px;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  
+  .sds-caption {
+    font-size: 0.85rem;
+  }
+}
+
+/* Ensure iframes are responsive */
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for Bootstrap navbar collapse on mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-toggler {
+    border: 1px solid #ddd;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 74, 173, 0.25);
+  }
+  
+  /* Search bar improvements handled by enhanced styles above */
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 767.98px) {
+  .nav-link, .btn, a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-nav .nav-link {
+    min-height: 50px;
+  }
+  
+  .search-bar .btn {
+    min-height: 38px;
+  }
+}
+
+/* Fix for sticky header on mobile */
+@media (max-width: 767.98px) {
+  .sticky-top {
+    position: relative;
+  }
+  
+  .main-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+}
+
+/* Improve readability on small screens */
+@media (max-width: 575.98px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  .col-md-6, .col-md-12 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/* Fix for background image on mobile */
+@media (max-width: 767.98px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+/* Improve form elements on mobile */
+@media (max-width: 767.98px) {
+  input, textarea, select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+  
+  .form-control {
+    padding: 12px;
+  }
+  
+  .btn {
+    padding: 12px 20px;
+  }
+}
+
+/* Fix for table responsiveness */
+@media (max-width: 767.98px) {
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+  
+  .table td, .table th {
+    padding: 8px 4px;
+  }
+}
+
+/* Improve modal responsiveness */
+@media (max-width: 767.98px) {
+  .modal-dialog {
+    margin: 10px;
+  }
+  
+  .modal-content {
+    border-radius: 8px;
+  }
+  
+  .modal-header {
+    padding: 15px;
+  }
+  
+  .modal-body {
+    padding: 15px;
+  }
+  
+  .modal-footer {
+    padding: 15px;
+  }
+}
+
+/* Additional mobile improvements */
+@media (max-width: 767.98px) {
+  /* Improve spacing for mobile */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Better button spacing */
+  .btn + .btn {
+    margin-top: 10px;
+  }
+  
+  /* Improve image responsiveness */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Better table handling on mobile */
+  .table-responsive {
+    border: none;
+  }
+  
+  /* Improve card layouts */
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  /* Better form layouts */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Improve list spacing */
+  ul, ol {
+    padding-left: 20px;
+  }
+  
+  /* Better spacing for sections */
+  section {
+    margin-bottom: 20px;
+  }
+  
+  /* Improve footer spacing */
+  .footer {
+    margin-top: 30px;
+  }
+}
+
+/* Extra small device improvements */
+@media (max-width: 575.98px) {
+  /* Reduce padding further */
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  /* Stack buttons vertically */
+  .d-flex.gap-3 {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  
+  /* Improve text readability */
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Better heading sizes */
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+  h4 { font-size: 1.1rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.9rem; }
+  
+  /* Improve link touch targets */
+  a {
+    padding: 5px 0;
+  }
+  
+  /* Better spacing for lists */
+  li {
+    margin-bottom: 5px;
+  }
+  
+  /* Improve form elements */
+  input, select, textarea {
+    font-size: 16px !important;
+    padding: 12px;
+  }
+  
+  /* Better button sizing */
+  .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  
+  /* Improve navigation */
+  .navbar-nav .nav-link {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Landscape orientation improvements */
+@media (max-width: 767.98px) and (orientation: landscape) {
+  .header-banner {
+    padding: 5px 10px;
+  }
+  
+  .header-banner h3 {
+    font-size: 1rem;
+  }
+  
+  .deped-logo, .deped-logo3 {
+    max-height: 50px !important;
+  }
+  
+  .tourlogo, .inheritelogo, .sdoinlogo {
+    max-height: 25px !important;
+  }
+  
+  .flag-raising-bg iframe {
+    height: 180px !important;
+  }
+}
+
+/* High DPI display improvements */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print styles for better printing */
+@media print {
+  .navbar, .footer, .btn, .search-bar {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+}
+
+/* --- ADDITIONAL MOBILE FIXES --- */
+
+@media (max-width: 767.98px) {
+  .header-banner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+    padding: 6px 2px 6px 2px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #eee;
+  }
+  .header-banner h3 {
+    font-size: 1.05rem;
+    margin: 2px 0 4px 0;
+    line-height: 1.2;
+  }
+  .header-banner img.deped-logo {
+    max-height: 36px !important;
+    margin: 0 0 2px 0;
+    display: block;
+  }
+  .header-banner .d-flex {
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 4px !important;
+    margin: 0;
+    padding: 0;
+  }
+  .header-banner img.tourlogo,
+  .header-banner img.inheritelogo,
+  .header-banner img.sdoinlogo {
+    max-height: 28px !important;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  section, .test-section, .resources-container, .gallery-section {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    margin-top: 10px !important;
+  }
+  .flag-raising-bg {
+    margin-top: 0 !important;
+  }
+  body > .header-banner {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Device-specific responsive video sizing */
+/* Default: Desktop/PC (large screens) */
+.responsive-iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-width: 900px;
+  min-height: 350px;
+  max-height: 70vh;
+  margin: 0 auto 16px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+.responsive-iframe iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  min-height: 350px;
+  max-height: 70vh;
+  border: 0;
+  display: block;
+  background: #000;
+}
+
+/* Mobile Portrait (phones, small screens) */
+@media (max-width: 767.98px) and (orientation: portrait) {
+  .responsive-iframe, .responsive-iframe iframe {
+    min-height: 180px;
+    max-height: 40vh;
+    aspect-ratio: 16/9;
+  }
+}
+
+/* Mobile/Tablet Landscape (small/medium screens, landscape) */
+@media (max-width: 991.98px) and (orientation: landscape) {
+  .responsive-iframe, .responsive-iframe iframe {
+    min-height: 180px;
+    max-height: 60vh;
+    min-width: 320px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* Make all iframes responsive by default on mobile */
+@media (max-width: 767.98px) {
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 180px;
+    max-width: 100vw;
+    display: block;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cta-section, .quick-links-section {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .cta-section h3, .quick-links-section h3 {
+    margin-bottom: 10px !important;
+    margin-top: 0 !important;
+  }
+  .cta-section .btn, .quick-links-section .btn {
+    margin-bottom: 8px !important;
+    margin-top: 0 !important;
+  }
+  .quick-links {
+    gap: 8px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .quick-link-btn {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .quick-links img {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    max-width: 110px;
+  }
+  .quick-links-section {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+  .cta-section {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+  section {
+    margin-bottom: 8px !important;
+    margin-top: 8px !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main-navbar, .container-fluid {
+    position: relative !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .deped-logo2 {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 8px !important;
+    float: none !important;
+  }
+}
+
+/* Remove vertical gaps between sections on all pages */
+section, .cta-section, .quick-links-section, .test-section, .resources-container, .gallery-section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+@media (max-width: 767.98px) {
+  section, .cta-section, .quick-links-section, .test-section, .resources-container, .gallery-section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+}
+
+/* Landscape fix for responsive iframes on mobile */
+@media (max-width: 991.98px) and (orientation: landscape) {
+  .responsive-iframe {
+    min-height: 220px;
+    height: 220px;
+    padding-bottom: 0 !important;
+  }
+  .responsive-iframe iframe {
+    min-height: 220px;
+    height: 220px;
+  }
+}
+
+/* Ensure responsive-iframe always takes a full row and prevents overlap */
+.responsive-iframe {
+  display: block !important;
+  width: 100% !important;
+  clear: both !important;
+  margin-bottom: 16px !important;
+}
+
+/* Ensure parent containers expand to fit their children and prevent overlap */
+.media-container,
+section > .media-container,
+section > .responsive-iframe {
+  overflow: auto !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Clearfix after responsive-iframe to prevent overlap */
+.responsive-iframe::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Enhanced Search Bar and Navigation Styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 25px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+  max-width: 400px;
+  width: 100%;
+}
+
+.search-bar:focus-within {
+  border-color: var(--primary-color, #004aad);
+  box-shadow: 0 0 0 0.2rem rgba(0, 74, 173, 0.25);
+  background-color: white;
+}
+
+/* --- Search Bar Layout Fix for Desktop --- */
+.search-bar .input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-bar .input-group .form-control,
+.search-bar .input-group .btn {
+  width: auto;
+  min-width: 0;
+}
+
+@media (max-width: 991.98px) {
+  .search-bar .input-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .search-bar .input-group .form-control,
+  .search-bar .input-group .btn {
+    width: 100%;
+  }
+}
+
+.search-bar .input-group .form-control::placeholder {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.search-bar .input-group .btn {
+  background: linear-gradient(135deg, var(--primary-color, #004aad), var(--secondary-color, #3b5bfe));
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  color: white;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-bar .input-group .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 74, 173, 0.3);
+}
+
+/* Enhanced Navbar Styles */
+.main-navbar {
+  border-bottom: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
+
+.main-navbar .navbar-brand {
+  font-weight: 700;
+  color: var(--primary-color, #004aad);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.main-navbar .navbar-brand:hover {
+  color: var(--secondary-color, #3b5bfe);
+  transform: translateY(-1px);
+}
+
+.main-navbar .nav-link {
+  color: #333;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.main-navbar .nav-link:hover {
+  color: var(--primary-color, #004aad);
+  background-color: rgba(0, 74, 173, 0.1);
+  transform: translateY(-1px);
+}
+
+.main-navbar .nav-link.active {
+  color: var(--primary-color, #004aad);
+  background-color: rgba(0, 74, 173, 0.1);
+}
+
+/* Enhanced Hamburger Menu */
+.navbar-toggler {
+  border: 2px solid var(--primary-color, #004aad);
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 74, 173, 0.25);
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 74, 173, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile Navigation Improvements */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    margin-top: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+  }
+
+  .navbar-nav {
+    margin-bottom: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 1rem;
+    margin: 0.25rem 0;
+    border-radius: 8px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    border-left-color: var(--primary-color, #004aad);
+    background-color: rgba(0, 74, 173, 0.1);
+    transform: translateX(5px);
+  }
+
+  .search-bar {
+    margin-top: 1rem;
+    max-width: 100%;
+    order: 2;
+  }
+
+  .search-bar .input-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search-bar .input-group .form-control {
+    border-radius: 25px;
+    border: 2px solid #e9ecef;
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+
+  .search-bar .input-group .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 1rem;
+  }
+}
+
+/* Landscape Mobile Improvements */
+@media (max-width: 991.98px) and (orientation: landscape) {
+  .navbar-collapse {
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem;
+    margin: 0.125rem 0;
+    font-size: 0.9rem;
+  }
+
+  .search-bar {
+    margin-top: 0.5rem;
+  }
+
+  .search-bar .input-group {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .search-bar .input-group .form-control {
+    flex: 1;
+  }
+
+  .search-bar .input-group .btn {
+    width: auto;
+    padding: 8px 16px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.375rem;
+  }
+
+  .navbar-collapse {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+
+  .search-bar {
+    margin-top: 0.75rem;
+  }
+
+  .search-bar .input-group .form-control {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  .search-bar .input-group .btn {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Search Bar Animation */
+.search-bar .input-group .form-control:focus {
+  transform: scale(1.02);
+}
+
+/* Enhanced Focus States for Accessibility */
+.navbar-toggler:focus,
+.nav-link:focus,
+.search-bar .input-group .form-control:focus,
+.search-bar .input-group .btn:focus {
+  outline: 2px solid var(--primary-color, #004aad);
+  outline-offset: 2px;
+}
+
+/* Search Suggestions (if implemented) */
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.search-suggestion-item {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.search-suggestion-item:hover {
+  background-color: #f8f9fa;
+}
+
+.search-suggestion-item:last-child {
+  border-bottom: none;
+}
+
+/* Loading State for Search */
+.search-loading {
+  position: relative;
+}
+
+.search-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  border: 2px solid #e9ecef;
+  border-top: 2px solid var(--primary-color, #004aad);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

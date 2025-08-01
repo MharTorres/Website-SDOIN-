@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="deped-seal.png" />
+  <title>Mobile Responsiveness Test - SDOIN</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .test-section {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .screen-size-indicator {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      z-index: 9999;
+    }
+    
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    
+    .test-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    
+    .test-image {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="screen-size-indicator" id="screenSize"></div>
+  
+  <div class="ilocos-banner">"Ragsak ken Rag-omi ti Napudno nga Agserbi"</div>
+
+  <nav class="navbar navbar-expand-lg main-navbar sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-home me-1"></i>Home
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i>About</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html"><i class="fas fa-graduation-cap me-1"></i>Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="initiatives.html"><i class="fas fa-lightbulb me-1"></i>Key Initiatives</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.php"><i class="fas fa-book me-1"></i>Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html"><i class="fas fa-newspaper me-1"></i>News</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.php"><i class="fas fa-images me-1"></i>Gallery</a></li>
+        </ul>
+
+        <div id="searchBarContainer"></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="header-banner">
+    <img src="deped-seal.png" alt="DepEd Logo" class="deped-logo">
+    <div class="text-center flex-grow-1">
+      <h3 class="fw-bold mb-1">SCHOOL DIVISION OF ILOCOS NORTE (SDOIN)</h3>
+    </div>
+    <div class="d-flex gap-2">
+      <img src="toured-logo.png" alt="TourEd Logo" class="tourlogo">
+      <img src="inherited-logo.png" alt="INheritEd Logo" class="inheritelogo">
+      <img src="sdoin-great.png" alt="SDOIN Great Logo" class="sdoinlogo">
+    </div>
+  </div>
+
+  <section class="test-section">
+    <h2 class="text-center mb-4">Mobile Responsiveness Test</h2>
+    <p class="text-center mb-4">This page tests all responsive elements. Resize your browser window to see how the layout adapts.</p>
+    
+    <div class="test-grid">
+      <div class="test-card">
+        <h4>Navigation Test</h4>
+        <p>Test the collapsible navigation menu on mobile devices.</p>
+        <div class="d-flex gap-2 flex-wrap justify-content-center">
+          <a href="index.html" class="btn btn-primary">Home</a>
+          <a href="about.html" class="btn btn-secondary">About</a>
+          <a href="programs.html" class="btn btn-success">Programs</a>
+        </div>
+      </div>
+      
+      <div class="test-card">
+        <h4>Image Responsiveness</h4>
+        <p>Test how images scale on different screen sizes.</p>
+        <img src="deped-seal.png" alt="DepEd Logo" class="test-image">
+      </div>
+      
+      <div class="test-card">
+        <h4>Form Elements</h4>
+        <p>Test form responsiveness and touch targets.</p>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Test input">
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="3" placeholder="Test textarea"></textarea>
+        </div>
+        <button class="btn btn-primary">Test Button</button>
+      </div>
+      
+      <div class="test-card">
+        <h4>Grid Layout</h4>
+        <p>Test responsive grid system.</p>
+        <div class="row">
+          <div class="col-6">
+            <div class="bg-light p-2 text-center">Col 1</div>
+          </div>
+          <div class="col-6">
+            <div class="bg-light p-2 text-center">Col 2</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="test-card">
+        <h4>Typography</h4>
+        <p>Test responsive typography scaling.</p>
+        <h1>H1 Heading</h1>
+        <h2>H2 Heading</h2>
+        <h3>H3 Heading</h3>
+        <p>Regular paragraph text for testing readability.</p>
+      </div>
+      
+      <div class="test-card">
+        <h4>Buttons & Links</h4>
+        <p>Test button and link touch targets.</p>
+        <div class="d-flex flex-column gap-2">
+          <a href="#" class="btn btn-primary">Primary Button</a>
+          <a href="#" class="btn btn-secondary">Secondary Button</a>
+          <a href="#" class="btn btn-success">Success Button</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-4">
+      <h4>Test Results</h4>
+      <div class="alert alert-info">
+        <strong>Current Screen Size:</strong> <span id="currentSize">Loading...</span><br>
+        <strong>Breakpoint:</strong> <span id="breakpoint">Loading...</span><br>
+        <strong>Orientation:</strong> <span id="orientation">Loading...</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer text-center-footer">
+    <section id="contact" class="contact-section text-black">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Contacts</h5>
+            <p><strong>Address:</strong> Brgy. 7B, Giron Street, Laoag City, Ilocos Norte</p>
+            <p><strong>Email:</strong> <a href="mailto:ilocos.norte@deped.gov.ph" class="text-black text-decoration-underline">ilocos.norte@deped.gov.ph</a></p>
+            <p><strong>Phone:</strong> <a href="tel:(077)771-0960">(077) 771-0960</a></p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/depedtayoilocosnorte/" target="_blank" class="text-black text-decoration-underline">DepEd Tayo Ilocos Norte</a></p>
+          </div>
+          <div class="col-md-6">
+            <img src="deped-seal.png" alt="DepEd Logo" class="deped-logo2">
+            <h5>Get in Touch</h5>
+            <a href="send-inquiry.html" class="btn btn-primary text-white">Send an Inquiry</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer-note">
+      &copy; 2025 Schools Division Office of Ilocos Norte | Designed with love for learners and educators.
+    </div>
+  </footer>
+
+  <script src="search_bar.js"></script>
+  <script>
+    // Initialize enhanced search bar
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchContainer = document.getElementById('searchBarContainer');
+      if (searchContainer) {
+        new SDOINSearchBar(searchContainer, {
+          placeholder: 'Search SDOIN...',
+          showSuggestions: true,
+          autoComplete: true
+        });
+      }
+    });
+
+    function updateScreenInfo() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const orientation = width > height ? 'Landscape' : 'Portrait';
+      
+      let breakpoint = 'Unknown';
+      if (width >= 1200) breakpoint = 'Extra Large (≥1200px)';
+      else if (width >= 992) breakpoint = 'Large (≥992px)';
+      else if (width >= 768) breakpoint = 'Medium (≥768px)';
+      else if (width >= 576) breakpoint = 'Small (≥576px)';
+      else breakpoint = 'Extra Small (<576px)';
+      
+      document.getElementById('screenSize').textContent = `${width}×${height}`;
+      document.getElementById('currentSize').textContent = `${width}px × ${height}px`;
+      document.getElementById('breakpoint').textContent = breakpoint;
+      document.getElementById('orientation').textContent = orientation;
+    }
+    
+    // Update on load and resize
+    window.addEventListener('load', updateScreenInfo);
+    window.addEventListener('resize', updateScreenInfo);
+    
+    // Update immediately
+    updateScreenInfo();
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
